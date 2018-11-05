@@ -8,11 +8,16 @@ class App extends Component {
     return (
       <div className="App">
         <div className="main">
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <h1 className="App-title">Welcome to React</h1>
-          </header>
-          <img src={dandelion} className="photo" alt="dandelion photo"/>
+          <div className="layout_header">
+            <header className="App-header">
+              <img src={logo} className="App-logo" alt="logo" />
+              <h1 className="App-title">Jowita Stachowiak</h1>
+              
+            </header>
+          </div>
+          <div className="layout_photo">
+            <img src={dandelion} className="photo" alt="dandelion photo"/>
+          </div>
         </div>
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
