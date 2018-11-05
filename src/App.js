@@ -10,9 +10,9 @@ class App extends Component {
         <div className="main">
           <div className="layout_header">
             <header className="App-header">
-              <img src={logo} className="App-logo" alt="logo" />
+             
               <h1 className="App-title">Jowita Stachowiak</h1>
-              
+               <img src={logo} className="App-logo" alt="logo" />
             </header>
           </div>
           <div className="layout_photo">
@@ -20,7 +20,7 @@ class App extends Component {
           </div>
         </div>
         <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
+          
         </p>
       </div>
     );

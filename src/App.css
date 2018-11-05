@@ -10,9 +10,8 @@
 }
 .main {
   display: flex; 
-  
-  
 }
+
 
 .layout_header {
 
@@ -25,6 +24,7 @@
 
 
 .App-header {
+
   background-color: #cce2df;
   height: 100%;
   
@@ -33,6 +33,9 @@
 }
 
 .App-title {
+
+  margin: 0;
+  padding: 30px;
   font-size: 30px;
   font-weight: lighter;
 }
