@@ -7,11 +7,24 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+
+        <nav className="layout_nav">
+          <a href="">About me</a>
+          <a href="">Photography</a>
+          <a href="">Contact</a>
+        
+          <button>
+            <i className="fa fa-bars">&#9776;</i>
+          </button>
+        </nav>
         <div className="main">
+
+
+
           <div className="layout_header">
             <header className="App-header">
              
-              <h1 className="App-title">Jowita Stachowiak</h1>
+              <h1 className="App-title">Things are not what they seem nor are they otherwise.</h1>
                <img src={logo} className="App-logo" alt="logo" />
             </header>
           </div>
