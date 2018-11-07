@@ -1,11 +1,19 @@
 .App {
-  text-align: center;
-  width: 95%;
+  
+  width: 90%;
   margin: 100px auto 0;
 }
+.back_graphic {
+  width: 50vw;
+  position: absolute;
+  z-index: -1;
+  top: -30px;
+  left: -30px;
+  opacity: 0.5;
+  animation: App-logo-spin infinite 200s linear;
+}
 
-.App-logo {
-  
+.App-logo {  
   height: 80px;
 }
 
@@ -32,7 +40,7 @@
 
 .layout_nav a:hover {
   color: #61DAFB;
-
+  
 }
 .main {
   display: flex;
