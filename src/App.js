@@ -28,7 +28,7 @@ class App extends Component {
 
             <header className="App-header">             
               <h1 className="App-title">Things are not what they seem nor are they otherwise.</h1>
-               <img src={logo} className="App-logo" alt="logo" />
+               
             </header>
           </div>
 
@@ -37,9 +37,8 @@ class App extends Component {
           </div>
         </div>
 
-        <p className="App-intro">
-          
-        </p>
+        <p className="App-intro"></p>
+        <img src={logo} className="App-logo" alt="logo" />
       </div>
     );
   }
