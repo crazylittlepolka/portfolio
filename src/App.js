@@ -22,19 +22,49 @@ class App extends Component {
           </button>
         </nav>
 
+        <div className="grid_container">
+
+          <div className="layout_box">
+            <img src={dandelion} className="item1" alt="dandelion photo"/>
+          </div>
+
+          <div className="layout_box item2"> Things are not what they seem nor are they otherwise.
+          </div>
+
+          <div className="layout_box"> 3
+          </div>
+
+
+          <div className="layout_box"> 4
+          </div>
+
+        </div>
+
         <div className="main">
 
-          <div className="layout_header">
+          <div className="layout">
 
-            <header className="App-header">             
+            <div className="layout_text">             
               <h1 className="App-title">Things are not what they seem nor are they otherwise.</h1>
                
-            </header>
+            </div>
           </div>
 
-          <div className="layout_photo">
-            <img src={dandelion} className="photo" alt="dandelion photo"/>
+
+          
+          <div className="layout">
+
+
+
           </div>
+
+          <div className="layout">
+            <div className="layout_text">             
+              <h1 className="App-title">Things are not what they seem nor are they otherwise.</h1>
+               
+            </div>
+          </div>
+
         </div>
 
         <p className="App-intro"></p>
