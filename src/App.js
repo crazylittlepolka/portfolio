@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import dandelion from './dandelion_01.jpg';
+import portrait from './js_medium.jpg'
 import wreth from './wreth.png'
 import './App.css';
 
@@ -35,37 +36,13 @@ class App extends Component {
           </div>
 
 
-          <div className="layout_box"> 4
+          <div className="layout_box"> 
+            <img src={portrait} className="item1" alt="portrait photo"/>
           </div>
 
         </div>
 
-        <div className="main">
 
-          <div className="layout">
-
-            <div className="layout_text">             
-              <h1 className="App-title">Things are not what they seem nor are they otherwise.</h1>
-               
-            </div>
-          </div>
-
-
-          
-          <div className="layout">
-
-
-
-          </div>
-
-          <div className="layout">
-            <div className="layout_text">             
-              <h1 className="App-title">Things are not what they seem nor are they otherwise.</h1>
-               
-            </div>
-          </div>
-
-        </div>
 
         <p className="App-intro"></p>
         <img src={logo} className="App-logo" alt="logo" />
