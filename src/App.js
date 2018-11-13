@@ -6,6 +6,16 @@ import wreth from './wreth.png'
 import './App.css';
 
 class App extends Component {
+
+  createCollage = () => {
+    let collage = [];
+    
+
+    for (let i=0; i<4; i++){
+      collage.push(<img src={portrait} className="collage_item" alt="portrait photo"/>)
+    }
+    return collage;
+  }
   render() {
     return (
       <div className="App">
@@ -36,13 +46,11 @@ class App extends Component {
           </div>
 
 
-          <div className="layout_box"> 
-            <img src={portrait} className="item1" alt="portrait photo"/>
+          <div className="layout_box collage"> 
+            { this.createCollage() }
           </div>
 
         </div>
-
-
 
         <p className="App-intro"></p>
         <img src={logo} className="App-logo" alt="logo" />

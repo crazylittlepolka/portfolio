@@ -67,7 +67,13 @@
   
 }
 
-.item4 {
+.collage {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.collage_item {
+  width: 100%;
 
 }
 
