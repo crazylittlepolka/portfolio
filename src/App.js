@@ -8,8 +8,7 @@ import './App.css';
 class App extends Component {
 
   createCollage = () => {
-    let collage = [];
-    
+    let collage = [];    
 
     for (let i=0; i<4; i++){
       collage.push(<img src={portrait} className="collage_item" alt="portrait photo"/>)

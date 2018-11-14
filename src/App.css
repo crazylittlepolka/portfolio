@@ -42,7 +42,7 @@
 .grid_container {
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-row-gap: 5px;
+  grid-row-gap: 100px;
   
 }
 
@@ -57,7 +57,7 @@
 .item2 {
   margin: 0;
   padding: 80px 30px 0 100px;
-  font-size: 3.5em;
+  font-size: 5em;
   font-weight: lighter;
   color: #fff;
   background-color: lightgrey;  
@@ -70,13 +70,19 @@
 .collage {
   display: grid;
   grid-template-columns: auto auto;
+  background-color: #cce2df;
 }
 
 .collage_item {
   width: 100%;
-
+  filter: opacity(0.4);
+  transition: filter 1s;
+  /*animation: collage-filter infinite 10s linear alternate;*/
 }
 
+.collage_item:hover {
+  filter: opacity(0.9);
+}
 
 .App-logo {  
   height: 80px;
@@ -128,4 +134,9 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+@keyframes collage-filter {
+  from { filter: sepia(20%); }
+  to { filter: sepia(60%); }
 }
