@@ -6,17 +6,56 @@ import wreth from './wreth.png'
 import './App.css';
 
 class App extends Component {
+  state = {
+    textON: false
+  }
 
+  componentDidMount(){
+    this.handleMouseOver();
+    this.handleMouseOut();
+  }
+
+  //functions to handle mouse over and out
+  handleMouseOver = () => {
+    const textIsOff = this.state.textON;
+    this.setState({ textON: !textIsOff })
+  }
+  handleMouseOut = () => {
+    this.setState({ text: '' }) 
+  }
+
+
+  //function to create collage of portrait photos
   createCollage = () => {
     let collage = [];    
+    
 
     for (let i=0; i<4; i++){
-      collage.push(<img src={portrait} className="collage_item" alt="portrait photo"/>)
+          
+      const portraitImage = (
+        <div key={i}>
+          <img 
+            src={portrait}
+            id="photo" 
+            className="collage_item" 
+            alt="portrait photo"         
+          />
+          
+        </div>
+      )
+
+      collage.push(portraitImage);
     }
+
+
+
     return collage;
   }
+
   render() {
+
     return (
+
       <div className="App">
 
         <img src={wreth} className="back_graphic" alt="floral wreth" /> 
@@ -45,8 +84,12 @@ class App extends Component {
           </div>
 
 
-          <div className="layout_box collage"> 
+          <div 
+            className="layout_box collage"
+            onmouseover={this.handleMouseOver()}
+          >
             { this.createCollage() }
+            <p>{this.state.textON? '' : 'click'}</p>
           </div>
 
         </div>

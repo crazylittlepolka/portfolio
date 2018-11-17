@@ -42,13 +42,11 @@
 .grid_container {
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-row-gap: 100px;
-  
+  grid-row-gap: 100px;  
 }
 
 .layout_box {
-  background-color: #cce2df;
-  
+  background-color: #cce2df;  
 }
 
 .item1 {
@@ -63,25 +61,21 @@
   background-color: lightgrey;  
 }
 
-.item3 {
-  
-}
-
 .collage {
   display: grid;
   grid-template-columns: auto auto;
-  background-color: #cce2df;
+  background-color: #cce2df;  
 }
 
 .collage_item {
   width: 100%;
-  filter: opacity(0.4);
+  filter: opacity(0.6);
   transition: filter 1s;
   /*animation: collage-filter infinite 10s linear alternate;*/
 }
 
 .collage_item:hover {
-  filter: opacity(0.9);
+  filter: opacity(0.9);  
 }
 
 .App-logo {  
@@ -120,12 +114,8 @@
   font-weight: lighter;
   width: 80%;
   height: 80%;
-  background-color: #cce2df;
-  
-  
+  background-color: #cce2df; 
 }
-
-
 
 .App-intro {
   font-size: large;
