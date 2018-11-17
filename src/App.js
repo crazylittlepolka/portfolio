@@ -21,7 +21,8 @@ class App extends Component {
     this.setState({ textON: !textIsOff })
   }
   handleMouseOut = () => {
-    this.setState({ text: '' }) 
+    const textIsOn = this.state.textON;
+    this.setState({ textON: !textIsOn })
   }
 
 
@@ -47,9 +48,15 @@ class App extends Component {
       collage.push(portraitImage);
     }
 
-
-
     return collage;
+  }
+
+  createText = () => {
+      let text = [];
+
+      const clickText = (<p className="textON">{this.state.textON? '' : 'click'}</p>)
+      text.push(clickText)
+      return text;
   }
 
   render() {
@@ -86,10 +93,11 @@ class App extends Component {
 
           <div 
             className="layout_box collage"
-            onmouseover={this.handleMouseOver()}
+            onMouseOver={this.handleMouseOver}
+            onMouseOut={this.handleMouseOut}
           >
             { this.createCollage() }
-            <p>{this.state.textON? '' : 'click'}</p>
+            { this.createText() }
           </div>
 
         </div>

@@ -73,9 +73,15 @@
   transition: filter 1s;
   /*animation: collage-filter infinite 10s linear alternate;*/
 }
-
 .collage_item:hover {
   filter: opacity(0.9);  
+}
+
+.textON {
+  position: absolute;
+  margin: 280px 0 0 270px;
+  font-size: 30px;
+  color: yellow;
 }
 
 .App-logo {  
