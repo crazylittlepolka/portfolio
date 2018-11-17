@@ -43,12 +43,16 @@ class App extends Component {
             src={portrait}
             id="photo" 
             className="collage_item" 
-            alt="portrait photo"         
+            alt="portrait photo"
+            onMouseOver={this.handleMouseOver}
+            onMouseOut={this.handleMouseOut}
+
           />
           
         </div>
-      )
 
+      )
+     
       this.state.collage.push(portraitImage);
     }
 
@@ -97,8 +101,7 @@ class App extends Component {
 
           <div 
             className="layout_box collage"
-            onMouseOver={this.handleMouseOver}
-            onMouseOut={this.handleMouseOut}
+
           >
             { this.createCollage() }
             { this.createText() }
