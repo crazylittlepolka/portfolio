@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
+//import Message from './Message'
+
 import logo from './logo.svg';
 import dandelion from './dandelion_01.jpg';
 import portrait from './js_medium.jpg'
 import wreth from './wreth.png'
+
 import './App.css';
 
 class App extends Component {
   state = {
-    textON: false
+    textON: false,
+    collage: []
   }
 
   componentDidMount(){
@@ -28,7 +32,7 @@ class App extends Component {
 
   //function to create collage of portrait photos
   createCollage = () => {
-    let collage = [];    
+      
     
 
     for (let i=0; i<4; i++){
@@ -45,10 +49,10 @@ class App extends Component {
         </div>
       )
 
-      collage.push(portraitImage);
+      this.state.collage.push(portraitImage);
     }
 
-    return collage;
+    return this.state.collage;
   }
 
   createText = () => {
@@ -98,6 +102,7 @@ class App extends Component {
           >
             { this.createCollage() }
             { this.createText() }
+
           </div>
 
         </div>
