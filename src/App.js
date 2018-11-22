@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
-//import Message from './Message'
 
-import logo from './logo.svg';
-import dandelion from './dandelion_01.jpg';
-import portrait from './js_medium.jpg'
+import dandelion from './img/dandelion_01.jpg';
+import me01 from './img/moi_01.jpg'
+import me02 from './img/moi_02.jpg'
+import me03 from './img/moi_03.jpg'
+import me04 from './img/moi_04.jpg'
+import drawing01 from './drawing/drawing01.png'
+import drawing02 from './drawing/drawing02.png'
+import drawing03 from './drawing/drawing03.png'
+import drawing04 from './drawing/drawing04.png'
 import wreth from './wreth.png'
 
 import './App.css';
@@ -11,7 +16,15 @@ import './App.css';
 class App extends Component {
   state = {
     textON: false,
-    collage: []
+    collage: [
+      { src:me01, alt: 'portrait photo number 1' },
+      { src:me02, alt: 'portrait photo number 2' },
+      { src:me03, alt: 'portrait photo number 3' },
+      { src:me04, alt: 'portrait photo number 4' }
+    ],
+    drawings: [
+      { src:drawing01 }, {src:drawing02}, {src:drawing03}, {src:drawing04}
+    ]
   }
 
   componentDidMount(){
@@ -30,35 +43,6 @@ class App extends Component {
   }
 
 
-  //function to create collage of portrait photos
-  createCollage = () => {
-      
-    
-
-    for (let i=0; i<4; i++){
-          
-      const portraitImage = (
-        <div key={i}>
-          <img 
-            src={portrait}
-            id="photo" 
-            className="collage_item" 
-            alt="portrait photo"
-            onMouseOver={this.handleMouseOver}
-            onMouseOut={this.handleMouseOut}
-
-          />
-          
-        </div>
-
-      )
-     
-      this.state.collage.push(portraitImage);
-    }
-
-    return this.state.collage;
-  }
-
   createText = () => {
       let text = [];
 
@@ -68,7 +52,7 @@ class App extends Component {
   }
 
   render() {
-
+    console.log(this.state.collage)
     return (
 
       <div className="App">
@@ -99,19 +83,37 @@ class App extends Component {
           </div>
 
 
-          <div 
-            className="layout_box collage"
+          <div className="layout_box collage">
+            { this.state.collage.map(photo => {
 
-          >
-            { this.createCollage() }
-            { this.createText() }
+              return (
+                <img
+                  key={ photo.id }
+                  src={ photo.src }
+                  alt={ photo.alt }
+                  className="collage_item"
+                />
+              )
+
+            })}
+
+            { this.state.drawings.map(drawing => {
+
+              return (
+                <img
+                  key={drawing.id}
+                  src={drawing.src}
+                  className="collage_item drawing"
+                />
+              )
+            })}
 
           </div>
 
         </div>
 
         <p className="App-intro"></p>
-        <img src={logo} className="App-logo" alt="logo" />
+        
       </div>
     );
   }

@@ -69,12 +69,14 @@
 
 .collage_item {
   width: 100%;
-  filter: opacity(0.6);
+  
   transition: filter 1s;
   /*animation: collage-filter infinite 10s linear alternate;*/
 }
-.collage_item:hover {
-  filter: opacity(0.9);  
+
+.drawing {
+  position: absolute;
+  width: 45%;
 }
 
 .textON {
