@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import DrawingsList from './DrawingsList'
 
 import dandelion from './img/dandelion_01.jpg';
 import me01 from './img/moi_01.jpg'
@@ -15,7 +16,6 @@ import './App.css';
 
 class App extends Component {
   state = {
-    textON: false,
     collage: [
       { src:me01, alt: 'portrait photo number 1' },
       { src:me02, alt: 'portrait photo number 2' },
@@ -27,32 +27,7 @@ class App extends Component {
     ]
   }
 
-  componentDidMount(){
-    this.handleMouseOver();
-    this.handleMouseOut();
-  }
-
-  //functions to handle mouse over and out
-  handleMouseOver = () => {
-    const textIsOff = this.state.textON;
-    this.setState({ textON: !textIsOff })
-  }
-  handleMouseOut = () => {
-    const textIsOn = this.state.textON;
-    this.setState({ textON: !textIsOn })
-  }
-
-
-  createText = () => {
-      let text = [];
-
-      const clickText = (<p className="textON">{this.state.textON? '' : 'click'}</p>)
-      text.push(clickText)
-      return text;
-  }
-
-  render() {
-    console.log(this.state.collage)
+  render() {    
     return (
 
       <div className="App">
@@ -92,30 +67,20 @@ class App extends Component {
                   src={ photo.src }
                   alt={ photo.alt }
                   className="collage_item"
+
                 />
               )
 
             })}
 
-            { this.state.drawings.map(drawing => {
-
-              return (
-                <img
-                  key={drawing.id}
-                  src={drawing.src}
-                  className="collage_item drawing"
-                />
-              )
-            })}
-
+            <DrawingsList
+              drawings={this.state.drawings}
+              showDrawing={this.showDrawing}
+            />
           </div>
-
-        </div>
-
-        <p className="App-intro"></p>
-        
+        </div>        
       </div>
-    );
+    )
   }
 }
 

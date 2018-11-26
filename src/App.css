@@ -68,33 +68,34 @@
 }
 
 .collage_item {
-  width: 100%;
-  
+  width: 100%;  
   transition: filter 1s;
+
   /*animation: collage-filter infinite 10s linear alternate;*/
 }
 
+.drawings {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+}
 .drawing {
   position: absolute;
-  width: 45%;
+  width: 45%;  
 }
 
-.textON {
+.inactive {
   position: absolute;
-  margin: 280px 0 0 270px;
-  font-size: 30px;
-  color: yellow;
-  animation: shake infinite 1s linear;
+  width: 45%;
+  filter: opacity(0.0);
 }
 
-.App-logo {  
-  height: 80px;
+.active {
+  position: absolute;
+  width: 45%;
+  visibility: visible;
+  /*animation: shake infinite 1s linear;*/
 }
-
-.App-logo:hover {
-  animation: App-logo-spin infinite 20s linear;
-}
-
 
 .main {
   display: flex;
