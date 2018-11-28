@@ -23,7 +23,7 @@ class Drawing extends Component {
 	render() {		
 		return (		
 
-			<div
+			<div className="drawing"
             	
             	onClick={ this.toggleHidden}
             >	

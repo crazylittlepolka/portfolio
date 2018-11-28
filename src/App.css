@@ -75,61 +75,25 @@
 }
 
 .drawings {
-  position: absolute;
-  z-index: 10;
-  width: 100%;
+position: absolute;
+display: grid;
+grid-template-columns: auto auto;
+
 }
+
+
 .drawing {
-  position: absolute;
-  width: 45%;  
+  width: 90%;
 }
-
-.inactive {
-  position: absolute;
-  width: 45%;
-  filter: opacity(0.0);
-}
-
 .active {
-  position: absolute;
-  width: 45%;
+
+  width: 100%;
   visibility: visible;
   /*animation: shake infinite 1s linear;*/
 }
 
-.main {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 10px; 
-}
-.layout {
-  flex: 50%;
-}
 
-.layout_text {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background-color: #fff;
-  height: 100%;  
-  color: #fff;
 
-}
-
-.App-title {
-  margin: 0;
-  padding: 30px;
-  font-size: 3em;
-  font-weight: lighter;
-  width: 80%;
-  height: 80%;
-  background-color: #cce2df; 
-}
-
-.App-intro {
-  font-size: large;
-}
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
