@@ -24,9 +24,13 @@ class App extends Component {
     ],
     drawings: [
       { src:drawing01 }, {src:drawing02}, {src:drawing03}, {src:drawing04}
-    ]
+    ],
+    className: 'active',
+    opened: false
   }
-
+    toggleHidden = () => {
+    this.setState({ opened: !this.state.opened})
+  }
   render() {    
     return (
 
@@ -73,10 +77,21 @@ class App extends Component {
 
             })}
 
-            <DrawingsList
-              drawings={this.state.drawings}
-              showDrawing={this.showDrawing}
-            />
+           <div className="drawings">
+
+            { this.state.drawings.map((item, i) => {
+              return(
+                <img
+                  key={i}
+                  src={ item.src }
+                  onClick={ this.toggleHidden}
+                  className="active"
+                />                   
+            
+              )
+            {!this.state.opened && <img src={item.src} className="active"/>}
+            })}
+           </div>
           </div>
         </div>        
       </div>

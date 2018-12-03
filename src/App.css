@@ -62,8 +62,9 @@
 }
 
 .collage {
+  
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 50% 50%;
   background-color: #cce2df;  
 }
 
@@ -77,13 +78,12 @@
 .drawings {
 position: absolute;
 display: grid;
-grid-template-columns: auto auto;
-
+grid-template-columns: 50% 50%;
 }
 
 
 .drawing {
-  width: 90%;
+  width: 100%;
 }
 .active {
 

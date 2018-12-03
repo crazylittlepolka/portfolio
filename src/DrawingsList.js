@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Drawing from './Drawing';
+//import Drawing from './Drawing';
 
 class DrawingsList extends Component {
 
@@ -29,16 +29,17 @@ class DrawingsList extends Component {
 
 				{ this.props.drawings.map((item, i) => {
 					return(
-						<Drawing
+						<img
 							key={i}
 							src={ item.src }
-							
+							onClick={ this.toggleHidden}
+							className="active"
 						/>
-
+							
 	                		
 						
 					)
-
+					{!this.state.opened && <img src={this.props.src} className="active"/>}
 				})}
 			</div>
 		)
