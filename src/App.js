@@ -63,37 +63,23 @@ class App extends Component {
 
 
           <div className="layout_box collage">
-            { this.state.collage.map(photo => {
 
-              return (
-                <img
-                  key={ photo.id }
-                  src={ photo.src }
-                  alt={ photo.alt }
-                  className="collage_item"
+            <img src={me01} className="photo1"/>
+            <img src={drawing01} className="drawing1"/>
 
-                />
-              )
+            <img src={me02} className="photo2"/>
+            <img src={drawing02} className="drawing2"/>
 
-            })}
+            <img src={me03} className="photo3"/>
+            <img src={drawing03} className="drawing3"/>
 
-           <div className="drawings">
+            <img src={me04} className="photo4"/>
+            <img src={drawing04} className="drawing4"/>
 
-            { this.state.drawings.map((item, i) => {
-              return(
-                <img
-                  key={i}
-                  src={ item.src }
-                  onClick={ this.toggleHidden}
-                  className="active"
-                />                   
             
-              )
-            {!this.state.opened && <img src={item.src} className="active"/>}
-            })}
-           </div>
-          </div>
-        </div>        
+          </div> 
+        </div> 
+
       </div>
     )
   }
