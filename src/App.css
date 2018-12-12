@@ -2,6 +2,7 @@
   
   width: 90%;
   margin: 100px auto 0;
+  font-family: 'Raleway', sans-serif;
 }
 .back_graphic {
   width: 50vw;
@@ -13,7 +14,8 @@
   animation: App-logo-spin infinite 200s linear;
 }
 .layout_name {
-  color: #61DAFB;
+  /*color: #61DAFB;*/
+  color: #859398;
   font-weight: lighter;
 }
 
@@ -34,10 +36,15 @@
 }
 
 .layout_nav a:hover {
-  color: #61DAFB;
+  color: #fa7268;
   text-decoration: underline;
 }
-
+button {
+    transition: color 0.8s;
+}
+button:hover {
+  color: #fa7268;
+}
 /**/
 .grid_container {
   display: grid;
@@ -46,7 +53,9 @@
 }
 
 .layout_box {
-  background-color: #cce2df;  
+  /*background-color: #cce2df;  
+  background-color: #fa7268;*/
+  background: linear-gradient(90deg, #cce2df, #859398 100%);
 }
 
 .item1 {
@@ -60,7 +69,19 @@
   color: #fff;
   background-color: lightgrey;  
 }
+.item3 {
+  color: #fff;
+  background: linear-gradient(90deg, #859398, #cce2df 100%);
+  padding: 20px;
+}
 
+li {
+  list-style-type:none;
+}
+li i {
+  padding-right: 5px;
+  font-size: 5px;
+}
 .collage {
   
   display: grid;
@@ -132,7 +153,7 @@
 }
 .drawing1:hover,.drawing2:hover,.drawing3:hover,.drawing4:hover {
   opacity: 1;
-  animation: shake infinite 1s linear;
+  animation: shake infinite 1.3s linear;
 }
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }

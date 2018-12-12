@@ -58,7 +58,30 @@ class App extends Component {
           <div className="layout_box item2"> Things are not what they seem nor are they otherwise.
           </div>
 
-          <div className="layout_box"> 3
+          <div  className="layout_box item3">
+          <h2>Skills</h2>
+          <h3>Web Development:</h3>
+            <ul>
+              <li>HTML <i className="fa fa-square-o"></i><i className="fa fa-square-o"></i><i className="fa fa-square-o"></i><i class="fa fa-square"></i></li>
+              <li>HTML Canvas</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>Jasmine</li>
+              <li>jQuery</li>
+              <li>React</li>
+              <li>API</li>
+              <li>RWD</li>
+              <li>ARIA</li>
+              <li>Git</li>
+            </ul>
+            
+            <h3>Graphic Design:</h3>
+              <ul>
+                <li>Photoshop</li>
+                <li>Illustrator</li>
+                <li>InDesign</li>
+              </ul>
+
           </div>
 
 
