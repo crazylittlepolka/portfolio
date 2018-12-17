@@ -55,7 +55,7 @@ button:hover {
 .layout_box {
   /*background-color: #cce2df;  
   background-color: #fa7268;*/
-  background: linear-gradient(90deg, #cce2df, #859398 100%);
+  background: linear-gradient(360deg, #cce2df, #859398 100%);
 }
 
 .item1 {
@@ -70,9 +70,33 @@ button:hover {
   background-color: lightgrey;  
 }
 .item3 {
+  display: flex;
+  flex-direction: column;
   color: #fff;
   background: linear-gradient(90deg, #859398, #cce2df 100%);
   padding: 20px;
+}
+
+.skills_layout {
+  display: flex;
+  flex-wrap: wrap;
+}
+.skill_box {
+  display: flex;
+  width: 100px;
+  height: 100px;
+  background-color: #fa7268;
+  margin: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.level {
+  opacity: 0;
+}
+
+.level:hover { 
+  opacity: 1; 
 }
 
 li {

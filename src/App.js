@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import DrawingsList from './DrawingsList'
 
 import dandelion from './img/dandelion_01.jpg';
 import me01 from './img/moi_01.jpg'
@@ -16,21 +15,11 @@ import './App.css';
 
 class App extends Component {
   state = {
-    collage: [
-      { src:me01, alt: 'portrait photo number 1' },
-      { src:me02, alt: 'portrait photo number 2' },
-      { src:me03, alt: 'portrait photo number 3' },
-      { src:me04, alt: 'portrait photo number 4' }
+    webSkills: [["HTML", "basic"], ["HTMLCanvas"], ["CSS"], ["JavaScript"], ["Jasmine"], ["jQuery"], ["React"], ["API"], ["RWD"], ["ARIA"], ["Git"]
     ],
-    drawings: [
-      { src:drawing01 }, {src:drawing02}, {src:drawing03}, {src:drawing04}
-    ],
-    className: 'active',
-    opened: false
+    designSkills: ["Photoshop", "Illustrator", "InDesign"]
   }
-    toggleHidden = () => {
-    this.setState({ opened: !this.state.opened})
-  }
+
   render() {    
     return (
 
@@ -59,28 +48,22 @@ class App extends Component {
           </div>
 
           <div  className="layout_box item3">
-          <h2>Skills</h2>
-          <h3>Web Development:</h3>
-            <ul>
-              <li>HTML <i className="fa fa-square-o"></i><i className="fa fa-square-o"></i><i className="fa fa-square-o"></i><i class="fa fa-square"></i></li>
-              <li>HTML Canvas</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-              <li>Jasmine</li>
-              <li>jQuery</li>
-              <li>React</li>
-              <li>API</li>
-              <li>RWD</li>
-              <li>ARIA</li>
-              <li>Git</li>
-            </ul>
-            
-            <h3>Graphic Design:</h3>
-              <ul>
-                <li>Photoshop</li>
-                <li>Illustrator</li>
-                <li>InDesign</li>
-              </ul>
+            <h2>Skills</h2>
+            <div className="skills_layout">
+              
+              {this.state.webSkills.map((skill,i) => {
+                return (
+                  <div key={i} className="skill_box">
+                    <div>{this.state.webSkills[i][0]}</div>
+                    <div className="level">{this.state.webSkills[i][1]}</div>
+                  </div>
+                  )                
+              }
+
+                )}
+            </div>
+         
+
 
           </div>
 
@@ -103,6 +86,27 @@ class App extends Component {
           </div> 
         </div> 
 
+            <h3>Web Development:</h3>
+            <ul>
+              <li>HTML <i className="fa fa-square-o"></i><i className="fa fa-square-o"></i><i className="fa fa-square-o"></i><i className="fa fa-square"></i></li>
+              <li>HTML Canvas</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>Jasmine</li>
+              <li>jQuery</li>
+              <li>React</li>
+              <li>API</li>
+              <li>RWD</li>
+              <li>ARIA</li>
+              <li>Git</li>
+            </ul>
+            
+            <h3>Graphic Design:</h3>
+              <ul>
+                <li>Photoshop</li>
+                <li>Illustrator</li>
+                <li>InDesign</li>
+              </ul>
       </div>
     )
   }
