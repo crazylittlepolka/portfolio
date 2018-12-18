@@ -15,25 +15,32 @@ import './App.css';
 
 class App extends Component {
   state = {
+    openNav: false,
     webSkills: [["HTML", "basic"], ["HTMLCanvas"], ["CSS"], ["JavaScript"], ["Jasmine"], ["jQuery"], ["React"], ["API"], ["RWD"], ["ARIA"], ["Git"]
     ],
-    designSkills: ["Photoshop", "Illustrator", "InDesign"]
+    designSkills: [["Photoshop"], ["Illustrator"], ["InDesign"]]
   }
 
+  //function to open/hide nav bar
+  updateBar = () => {
+    const navIsOpen = this.state.openNav;
+    this.setState({ openNav : !navIsOpen })
+  }
   render() {    
     return (
 
-      <div className="App">
+      <div className="App">         
 
-        <img src={wreth} className="back_graphic" alt="floral wreth" /> 
+        <h1 className="layout_name">Jowita Stachowiak Junior Front-End Developer</h1>
+        <nav className="nav_bar">
+          <div className={`layout_nav${ this.state.openNav ? 'layout_nav--open' : ''}`}>
+            <a href="">About me</a>
+            <a href="">Photography</a>
+            <a href="">Contact</a>
+          </div>
 
-        <h1 className="layout_name">Jowita Stachowiak Front-End Developer</h1>
-        <nav className="layout_nav">
-          <a href="">About me</a>
-          <a href="">Photography</a>
-          <a href="">Contact</a>
         
-          <button>
+          <button aria-label="show/hide nav bar" className="nav_button" onClick={ this.updateBar }>
             <i className="fa fa-bars">&#9776;</i>
           </button>
         </nav>
@@ -49,6 +56,7 @@ class App extends Component {
 
           <div  className="layout_box item3">
             <h2>Skills</h2>
+            <h3>Web Development</h3>
             <div className="skills_layout">
               
               {this.state.webSkills.map((skill,i) => {
@@ -57,13 +65,23 @@ class App extends Component {
                     <div>{this.state.webSkills[i][0]}</div>
                     <div className="level">{this.state.webSkills[i][1]}</div>
                   </div>
-                  )                
-              }
-
-                )}
+                  )             
+                }
+              )}
             </div>
-         
-
+            <h3>Graphic Design</h3>
+            <div className="skills_layout">
+              
+              {this.state.designSkills.map((skill,i) => {
+                return (
+                  <div key={i} className="skill_box">
+                    <div>{this.state.designSkills[i][0]}</div>
+                    <div className="level">{this.state.designSkills[i][1]}</div>
+                  </div>
+                  )             
+                }
+              )}
+            </div>
 
           </div>
 
@@ -86,27 +104,6 @@ class App extends Component {
           </div> 
         </div> 
 
-            <h3>Web Development:</h3>
-            <ul>
-              <li>HTML <i className="fa fa-square-o"></i><i className="fa fa-square-o"></i><i className="fa fa-square-o"></i><i className="fa fa-square"></i></li>
-              <li>HTML Canvas</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-              <li>Jasmine</li>
-              <li>jQuery</li>
-              <li>React</li>
-              <li>API</li>
-              <li>RWD</li>
-              <li>ARIA</li>
-              <li>Git</li>
-            </ul>
-            
-            <h3>Graphic Design:</h3>
-              <ul>
-                <li>Photoshop</li>
-                <li>Illustrator</li>
-                <li>InDesign</li>
-              </ul>
       </div>
     )
   }

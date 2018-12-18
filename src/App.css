@@ -1,6 +1,6 @@
 .App {
   
-  width: 90%;
+  width: 70%;
   margin: 100px auto 0;
   font-family: 'Raleway', sans-serif;
 }
@@ -20,10 +20,16 @@
 }
 
 /* NAVIGATION BAR*/
-.layout_nav {
-  text-align: right;
-  color: #4d4d4d;   
+nav {
+  display: flex;
+  flex-direction: row;
+
+  padding-bottom: 30px;
+  }
+.layout_nav--open {  
+    color: #4d4d4d;   
 }
+
 .layout_nav a{
   display: inline;
   padding: 0 0 0 10px;
@@ -40,7 +46,9 @@
   text-decoration: underline;
 }
 button {
-    transition: color 0.8s;
+  font-size: 1.5em;
+  margin-left: 30px;
+  transition: color 0.8s;
 }
 button:hover {
   color: #fa7268;
@@ -76,7 +84,6 @@ button:hover {
   background: linear-gradient(90deg, #859398, #cce2df 100%);
   padding: 20px;
 }
-
 .skills_layout {
   display: flex;
   flex-wrap: wrap;
@@ -85,29 +92,18 @@ button:hover {
   display: flex;
   width: 100px;
   height: 100px;
-  background-color: #fa7268;
+  border: 1px solid;
   margin: 10px;
   align-items: center;
   justify-content: center;
 }
-
 .level {
   opacity: 0;
 }
-
 .level:hover { 
   opacity: 1; 
 }
-
-li {
-  list-style-type:none;
-}
-li i {
-  padding-right: 5px;
-  font-size: 5px;
-}
-.collage {
-  
+.collage {  
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -116,8 +112,6 @@ li i {
 .photo1, .photo2, .photo3, .photo4 {
   position: relative;
   width: 100%;
-
-  /*animation: shake infinite 1s linear;*/
 }
 
 .photo1 {
